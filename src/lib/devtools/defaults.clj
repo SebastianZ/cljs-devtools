@@ -121,38 +121,26 @@
 (defmacro get-common-type-header-style []
   `(css (str "color: " (named-color :type-text) ";")
         "padding: 0px 2px 0px 2px;"
-        "-webkit-user-select: none;"))
-
-(defmacro get-inner-background-style []
-  `(css "position: absolute;"
-        "top: 1px;"
-        "right: 1px;"
-        "bottom: 1px;"
-        "left: 1px;"
-        "border-radius: 1px;"))
+        "user-select: none;"))
 
 (defmacro get-custom-printing-background-style []
   `(css (str "background-color:" (named-color :custom-printing-background) ";")
-        (get-inner-background-style)
         "border-radius: 0 1px 1px 0;"))
 
 (defmacro get-instance-type-header-background-style []
-  `(css (str "background-color:" (named-color :type 0.5) ";")
-        (get-inner-background-style)))
+  `(css (str "background-color:" (named-color :type 0.5) ";")))
 
 (defmacro get-protocol-background-style []
-  `(css (str "background-color:" (named-color :protocol 0.5) ";")
-        (get-inner-background-style)))
+  `(css (str "background-color:" (named-color :protocol 0.5) ";")))
 
 (defmacro get-native-reference-background-style []
-  `(css (str "background-color:" (named-color :native-reference-background) ";")
-        (get-inner-background-style)))
+  `(css (str "background-color:" (named-color :native-reference-background) ";")))
 
 (defmacro get-common-protocol-style []
   `(css "position: relative;"
         "padding: 0px 4px;"
         "border-radius: 2px;"
-        "-webkit-user-select: none;"))
+        "user-select: none;"))
 
 ; -- style macros -----------------------------------------------------------------------------------------------------------
 
@@ -171,7 +159,7 @@
         "position: relative;"
         "margin-right: 3px;"
         "border-radius: 2px;"
-        "-webkit-user-select: none;"
+        "user-select: none;"
         (if (= ~kind :slim)
           "padding: 0px 4px; top:2px;"
           "padding: 1px 4px; top:1px;")))

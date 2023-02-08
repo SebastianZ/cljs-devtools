@@ -213,7 +213,7 @@
         (<reference-surrogate> nil preview-markup (or details-markup default-details-fn)))
       preview-markup)))
 
-; -- mete-related markup ----------------------------------------------------------------------------------------------------
+; -- meta-related markup ----------------------------------------------------------------------------------------------------
 
 (defn <meta> [metadata]
   (let [body-fn (fn [] [:meta-body-tag (<preview> metadata)])

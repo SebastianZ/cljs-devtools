@@ -322,7 +322,7 @@
                                                               "border-radius: 0 2px 2px 0;")
      :meta-style                                         (css (str "color: " (named-color :meta-text) ";")
                                                               "padding: 0px 3px;"
-                                                              "-webkit-user-select: none;")
+                                                              "user-select: none;")
      :meta-body-style                                    (css (str "background-color: " (named-color :meta 0.1) ";")
                                                               (str "box-shadow: 0px 0px 0px 1px " (named-color :meta) " inset;")
                                                               "position: relative;"
@@ -362,7 +362,7 @@
                                                               "border-radius: 2px;"
                                                               "padding: 0px 4px 0px 4px;"
                                                               "margin: 1px 0px 0px 0px;"
-                                                              "-webkit-user-select: none;")
+                                                              "user-select: none;")
      :body-style                                         (css "display: inline-block;"
                                                               "padding: 3px 12px;"
                                                               (str "border-top: 2px solid " (named-color :body-border) ";")
@@ -379,7 +379,7 @@
                                                               "margin-right: 3px;"
                                                               "padding: 0px 4px 0px 4px;"
                                                               "margin: 1px 0px 0px 0px;"
-                                                              "-webkit-user-select: none;")
+                                                              "user-select: none;")
      :expanded-string-style                              (css "padding: 0px 12px 0px 12px;"
                                                               (str "color: " (named-color :string) ";")
                                                               "white-space: pre;"
