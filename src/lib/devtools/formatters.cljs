@@ -1,6 +1,6 @@
 (ns devtools.formatters
   (:require-macros [devtools.oops :refer [unchecked-aget unchecked-aset]])
-  (:require [goog.labs.userAgent.browser :refer [isAtLeast]]
+  (:require [goog.labs.userAgent.browser :refer [isChrome isEdge isFirefox isVersionOrHigher]]
             [devtools.prefs :as prefs]
             [devtools.util :refer [get-formatters-safe set-formatters-safe! in-node-context?]]
             [devtools.context :as context]
@@ -14,9 +14,9 @@
 
 (defn ^:dynamic available? []
   (or (in-node-context?)                                                                                                      ; node.js or Chrome 47+
-      (isAtLeast "CHROMIUM" 47)
-      (isAtLeast "EDGE" 79) ;; First Edge to use Blink, has Blink 79.
-      (isAtLeast "FIREFOX" 111)))
+      (and (isChrome) (isVersionOrHigher 47))
+      (and (isEdge) (isVersionOrHigher 79)) ;; First Edge to use Blink, has Blink 79.
+      (and (isFirefox) (isVersionOrHigher 111))))
 
 (deftype CLJSDevtoolsFormatter [])
 
